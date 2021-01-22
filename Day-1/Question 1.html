@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment-1</title>
+  </head>
+  <body>
+    <script>
+      console.log(1 + "2" + "2"); //output is ->122
+      /* In above statement , JS Engine will evaluate the expression inside (1 + "2" + "2"),
+There are 3 operands-> 1 , "2" , "2" and two same operator -> + (addition)
+Addition operator gives arithmetic addition of two Numbers .
+but it the same operator come in between  Number and string or String and String then it acts as concat operation.
+So , here is only one operand as number and other two are String so concate operation would be done .
+the result would be ->122*/
+      console.log(1 + +"2" + "2"); //output is ->32
+      /* Here , We 1 is first operand which is Number type , 
++"2" whole unit is another operand  which is Number type As Whenever + or - sign come  before string type would be change to Number  
+and last "2" is also operand which is String type .
+Now evaluate the expression from left to right ,
+First two places have Number type (place one is 1 and second place is +"2") so 
+evaluation would be 3 Now 
+on simplification of statement would be 3+"2", here concate operation would be done 
+so final result is ->32*/
+      console.log(1 + -"1" + "2"); //output is ->02
+      /*As per 2 statement , Here -"2" also called Number but it is of negative because of - sign .
+so Whenever expression would be evaluate , 1 + (-1) gives 0 
+Now on simplification it would convert into 0 + "2"
+Here concate operation perform 
+so final result would be ->02 */
+      console.log(+"1" + "1" + "2"); //output is ->112
+      /* In above statement, First operand is Number type (+"1") but other two are String type so 
+concate operation would be perform 
+so final result would be ->112*/
+      console.log("A" - "B" + "2"); //output is ->NAN2
+      /*In above statement , all three operands are String type .but there is - (subtraction) operator between 
+first two operands (from left to right ).
+-  would only perform subtraction if , operands are Number type or they are coerced to numbers
+But here , both cases are not possible because , these are not legal number and subtraction operation leads to NAN("Not-a-Number" value.).
+So evaluation of first two operands would be NAN 
+After that is String type operand and addition operator so concate operation would be perform as one operand is String type.
+so final result would be ->NAN2 */
+      console.log("A" - "B" + 2); //output is ->NAN
+      /* Here  , third operand is of Number type 
+so , on evaluation of first two operands  would be NAN 
+on simplification , expression would be NAN + 2 ,
+addition operation would be perform if there would be two legal Number type operand but one is NAN 
+so final result would be -> NAN*/
+    </script>
+  </body>
+</html>
