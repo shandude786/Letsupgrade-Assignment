@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment-3</title>
+  </head>
+  <body>
+    <script>
+      var library = [
+        {
+          author: "Bill Gates",
+          title: "The Road Ahead",
+          readingStatus: true,
+        },
+        {
+          author: "Steve Jobs",
+          title: "Walter Isaacson",
+          readingStatus: true,
+        },
+        {
+          author: "Suzanne Collins",
+          title: "Mockingjay: The Final Book of The Hunger Games",
+          readingStatus: false,
+        },
+      ];
+
+      console.log(
+        `Already read '${library[0].author}' by  ${library[0].title}. `
+      );
+      console.log(
+        `Already read '${library[1].author}' by  ${library[1].title}. `
+      );
+      console.log(
+        `You still need to read '${library[2].title}' by  ${library[2].author}. `
+      );
+      //         The output should look like this:
+      //   Already read 'Bill Gates' by The Road Ahead.
+      //   Already read 'Steve Jobs' by Walter Isaacson.
+      //   You still need to read 'Mockingjay: The Final Book of The Hunger Games' by Suzanne
+      //   Collins.
+    </script>
+  </body>
+</html>
