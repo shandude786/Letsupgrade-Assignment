@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment-4</title>
+  </head>
+  <body>
+    <h1>Enter two number and Click on add button to get sum</h1>
+    Enter First Number
+    <input type="text" value="" name="number-1" id="num-1" /> <br /><br />
+    Enter Second Number
+    <input type="text" value="" name="number-2" id="num-2" /><br /><br />
+    <button onclick="add()">Add</button>
+    <input type="text" value="" name="addition" id="num-3" />
+    <script>
+      var number1 = document.getElementById("num-1");
+      var number2 = document.getElementById("num-2");
+      var number3 = document.getElementById("num-3");
+
+      var arg1 = parseInt(number1.value);
+      console.log(arg1);
+      console.log(typeof arg1);
+      var arg2 = parseInt(number2.value);
+      console.log(arg2);
+      console.log(typeof arg2);
+      var sum = 0;
+      function add() {
+        sum = arg1 + arg2;
+        number3.value = sum;
+        console.log(sum);
+      }
+    </script>
+  </body>
+</html>

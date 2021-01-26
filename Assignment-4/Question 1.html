@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment-4</title>
+  </head>
+  <body>
+    <h1 class="demo2">Rinku</h1>
+
+    <h1 id="name">Hy , This is Shanti Lal</h1>
+    <h2 class="main">Hello , This is new World for JavaScript</h2>
+    <h2 class="main">Welcome to this new world</h2>
+
+    <h3>Namste , This is for Web Developer World</h3>
+    <h3>This is All about Web Development for the entire World</h3>
+    <h4 class="demo1">Family Members of JavaScript</h4>
+
+    <div class="demo2">Shanti Lal</div>
+    <div class="demo2">Pinky</div>
+
+    <h5 class="demo1">Family Members of Web Developer</h5>
+
+    <script>
+      //how many ways we can access elements in the DOM
+      // 1-Way ->Accessing Elements by Unique Identifier (ID)
+      const name = document.getElementById("name");
+      console.log(name);
+      /*  Whenever we access any HTML element using method  getElementById(), 
+      there should be id attribute linked with corresponding html element.
+      An ID must always be unique to the page,and therefore we will only ever be able to access 
+      a single element at a time with the getElementById() method.  
+      */
+
+      // 2-Way ->Accessing Elements by Class
+      const main = document.getElementsByClassName("main");
+      console.log(main);
+      /*
+       The class attribute is used to access one or more specific elements in the DOM.
+       So this we need to linked class attribute with value with that element which we would to access.
+       This  getElementsByClassName() method return all the elements with a given class name 
+        (a collection (an array) of HTML elements)
+        Here , We can perform array operation and properties for manipulation. 
+      */
+
+      //3-Way->Accessing Elements by Tag
+
+      const tagname = document.getElementsByTagName("h3");
+      console.log(tagname);
+      /*
+      We can uses this approach to get all the html elements having same html tag name , Hence it returns 
+       collection (an array) of HTML elements .So here we can also perform array operation and properties for manipulation
+      */
+
+      //4-Way ->Accessing Elements by Query Selectors.
+      const demo1query = document.querySelector(".demo1");
+      console.log(demo1query);
+      /*
+      To access a single element, we will use the querySelector() method , on basis of argument .
+      Argument would be Id or class name (with their access sign (id-># , class-> . ))linked with HTML element 
+       querySelector() returns a single object with the first HTML element that matches the 'selectors'
+      */
+      const demo2query = document.querySelectorAll(".demo2");
+      console.log(demo2query);
+
+      /*
+      Same as querySelector , but returns an array of objects with all the HTML elements that match the 'selectors'.
+      
+      */
+    </script>
+  </body>
+</html>
